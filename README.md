@@ -10,7 +10,7 @@ Run the Docker container
 npm run docker
 ```
 
-#Quick Start (local)
+# Quick Start (local)
 ```sh
 npm install
 npm run dev
