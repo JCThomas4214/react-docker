@@ -1,17 +1,14 @@
 ## React_Docker
 
 # Quick Start (Docker)
-Build the Docker image
+
 ```sh
-npm run docker-build
-```
-Run the Docker container
-```sh
-npm run docker
+npm run docker-build #Build the Docker image
+npm run docker #Run the Docker container
 ```
 
 # Quick Start (local)
 ```sh
-npm install
-npm run dev
+npm install #install npm packages
+npm run dev #run express server
 ```
