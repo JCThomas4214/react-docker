@@ -11,6 +11,6 @@ $ npm run docker # Run the Docker container
 # Quick Start (local)
 ```bash
 $ npm install # Install npm packages
-$ npm run dev # Run express server
+$ npm start # Run express server
 # npm run prod for production
 ```
