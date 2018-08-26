@@ -1,17 +1,24 @@
-import React from 'react'
-import Link from 'next/link'
+import React, {Component} from "react";
+import {connect} from "react-redux";
 
-export default () => (
-  <ul>
-    <li><Link href='/b' as='/a'><a>a</a></Link></li>
-    <li><Link href='/a' as='/b'><a>b</a></Link></li>
-    <li>
-      <Link
-        href={{pathname: '/posts', query: { id: '2' }}}
-        as='/posts/2'
-      >
-        <a>post #2</a>
-      </Link>
-    </li>
-  </ul>
-)
+class Page extends Component {
+    static getInitialProps({isServer, pathname, query, store}) {
+        
+        store.dispatch({type: 'FOO', payload: 'foo'}); // component will be able to read from store's state when rendered
+        
+        return {custom: 'custom'}; // you can pass some custom props to component from here
+    
+    }
+    
+    render() {
+        console.log(this.props);
+        return (
+            <div>
+                <div>Prop from Redux {this.props.foo}</div>
+                <div>Prop from getInitialProps {this.props.custom}</div>
+            </div>
+        )
+    }
+}
+
+export default connect()(Page);
