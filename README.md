@@ -2,7 +2,7 @@
 
 # Quick Start (Docker)
 
-```console
+```bash
 $ npm run docker-build #Build the Docker image
 # npm run docker-build-prod for production
 $ npm run docker #Run the Docker container
@@ -10,7 +10,7 @@ $ npm run docker #Run the Docker container
 ```
 
 # Quick Start (local)
-```console
+```bash
 $ npm install #install npm packages
 $ npm run dev #run express server
 # npm run prod for production
