@@ -6,9 +6,8 @@
     "preprod": "next build",
     "prod": "NODE_ENV=production node src/server/server.js",
     "docker": "docker run -it -v ${PWD}:/usr/src/app -v /usr/src/app/node_modules -p 3000:3000 --rm react-docker",
-    "docker-prod": "docker run -it -v ${PWD}:/usr/src/app -v /usr/src/app/node_modules -p 3000:3000 --rm react-docker-prod",
-    "docker-build": "docker build --rm -t react-docker .",
-    "docker-build-prod": "docker build --rm -t react-docker-prod . -f prod.Dockerfile"
+    "docker-prod": "docker run -it -v ${PWD}:/usr/src/app -v /usr/src/app/node_modules -p 3000:3000 --rm react-docker npm run prod",
+    "docker-build": "docker build --rm -t react-docker ."
   },
   "dependencies": {
     "express": "^4.16.3",
