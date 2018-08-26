@@ -2,6 +2,8 @@ import { createStore, applyMiddleware } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import thunkMiddleware from 'redux-thunk'
 
+const dev = process.env.NODE_ENV !== 'production'
+
 const exampleInitialState = {
   lastUpdate: 0,
   light: false,
@@ -64,5 +66,6 @@ export const resetCount = () => dispatch => {
 }
 
 export function initializeStore (initialState = exampleInitialState) {
-  return createStore(reducer, initialState, composeWithDevTools(applyMiddleware(thunkMiddleware)))
+  return dev === true ? createStore(reducer, initialState, composeWithDevTools(applyMiddleware(thunkMiddleware))) :
+    createStore(reducer, initialState, applyMiddleware(thunkMiddleware))
 }

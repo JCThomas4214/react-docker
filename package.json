@@ -2,9 +2,9 @@
   "name": "with-redux",
   "version": "1.0.0",
   "scripts": {
-    "start": "node server/server.js",
+    "start": "node src/server/server.js",
     "preprod": "next build",
-    "prod": "NODE_ENV=production node server/server.js",
+    "prod": "NODE_ENV=production node src/server/server.js",
     "docker": "docker run -it -v ${PWD}:/usr/src/app -v /usr/src/app/node_modules -p 3000:3000 --rm react-docker",
     "docker-prod": "docker run -it -v ${PWD}:/usr/src/app -v /usr/src/app/node_modules -p 3000:3000 --rm react-docker-prod",
     "docker-build": "docker build --rm -t react-docker .",
