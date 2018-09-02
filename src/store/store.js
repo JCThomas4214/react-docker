@@ -6,7 +6,7 @@ import {clockReducer} from './reducers/clock/clock';
 
 const dev = process.env.NODE_ENV !== 'production'
 
-const rootReducer = combineReducers({
+export const rootReducer = combineReducers({
   clock: clockReducer
 });
 

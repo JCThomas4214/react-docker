@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import { connect } from 'react-redux'
 import { incrementCount, decrementCount, resetCount } from '../store/actions/clock/clock'
 
-class Counter extends Component {
+export class Counter extends Component {
   increment = () => {
     const {dispatch} = this.props
     dispatch(incrementCount())
