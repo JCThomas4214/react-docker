@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "test": "NODE_ENV=test jest",
+    "test-watch": "NODE_ENV=test jest --watch",
     "start": "node src/server/server.js",
     "preprod": "next build",
     "prod": "NODE_ENV=production node src/server/server.js",
